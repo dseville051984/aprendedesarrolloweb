@@ -12,39 +12,48 @@
         <div class="logo">APRENDE DESARROLLO WEB</div>
         <nav>
             <ul class="menu">
-                <li id="liInicio"><a href="#" onclick="showSection('inicio')">Inicio</a></li>
-                <li id="liMetodologia"><a href="#" onclick="showSection('metodologia')">Metodología</a>
-                    <ul class="submenu">
-                        <li><a href="#" onclick="showSection('metodologia')">Aula Invertida</a></li>
-                        <li><a href="#" onclick="showSection('metodologia')">Puzzle de Aronson</a></li>
-                    </ul>
+                <li class="menu__item menu__item--ini">
+                    <a href="#" onclick="showSection('inicio')">Inicio</a>
                 </li>
-                <li id="liHtml"><a href="#" onclick="showSection('html')">HTML</a></li>
-                <li id="liCss"><a href="#" onclick="showSection('css')">CSS</a></li>
-                <li id="liJs"><a href="#" onclick="showSection('javascript')">JavaScript</a></li>
-                <li id="liUx"><a href="#" onclick="showSection('usabilidad')">Usabilidad</a></li>
-                <li id="liAuto"><a href="#" onclick="showSection('autoevaluacion')">Autoevaluación</a></li>
+                <li class="menu__item menu__item--met">
+                    <a href="#" onclick="showSection('metodologia')">Metodología</a>  
+                </li>
+                <li class="menu__item menu__item--html">
+                    <a href="#" onclick="showSection('html')">HTML</a>
+                </li>
+                <li class="menu__item menu__item--js">
+                    <a href="#" onclick="showSection('javascript')">JavaScript</a>
+                </li>
+                <li class="menu__item menu__item--css">
+                    <a href="#" onclick="showSection('css')">CSS</a>
+                </li>
+                <li class="menu__item menu__item--usabilidad">
+                    <a href="#" onclick="showSection('usabilidad')">Usabilidad</a>
+                </li>
+                <li class="menu__item menu__item--autoevaluacion">
+                    <a href="#" onclick="showSection('autoevaluacion')">Autoevaluación</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="inicio" class="section">
-			<div id="divInicio">
-                <div id="divInicioLeft">
+			<div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="flex: 1; padding-right: 0rem; padding: 20px">
                     <h1>APRENDE DESARROLLO WEB</h1>
                     <p>¡Aprende a crear páginas web desde cero! Únete a nuestro curso de desarrollo web y domina las herramientas más modernas. Adquiere habilidades en HTML, CSS, JavaScript y más. ¡Empieza ahora y lleva tus proyectos al siguiente nivel!</p>
                 </div>
-                <div id="divInicioRight">
-                    <img id="imgInicio" src="img/planta.png" alt="Planta decorativa">
+                <div style="flex: 1; text-align: center;">
+                    <img src="./img/planta.PNG" alt="Planta decorativa" style="max-width: 100%; height: 300px; border-radius: 0px;">
                 </div>
             </div>
         </section>
 
         <section id="metodologia" class="section hidden">
-            <h2 id="aulaInvertidaSec">Aula Invertida</h2>
+            <h2>Aula Invertida</h2>
             <p>El aula invertida es un enfoque pedagógico en el que los estudiantes revisan el contenido teórico en casa y utilizan el tiempo de clase para actividades prácticas y colaborativas.</p>
-            <h2 id="puzzleSec">Puzzle de Aronson</h2>
+            <h2>Puzzle de Aronson</h2>
             <p>El puzzle de Aronson es una técnica de aprendizaje cooperativo en la que los estudiantes trabajan en grupos para aprender y enseñar diferentes partes de un tema.</p>
         </section>
 
@@ -80,15 +89,15 @@
     </main>
 
     <footer>
-            <div id="footerMet" class="footer-section">
+            <div class="footer-section" style="background-color: #FFA07A;">
                 <h3>Cómo vamos a aprender</h3>
                 <p>Durante este curso usaremos las siguientes metodologías para nuestro aprendizaje:</p>
                 <ul>
-                    <li><a href="#aulaInvertidaSec" onclick="showSection('metodologia')">Aula Invertida</a></li>
-                    <li><a href="#puzzleSec" onclick="showSection('metodologia')">Puzzle de Aronson</a></li>
+                    <li><a href="#" onclick="showSection('metodologia')">Aula Invertida</a></li>
+                    <li><a href="#" onclick="showSection('metodologia')">Puzzle de Aronson</a></li>
                 </ul>
             </div>
-            <div id="footerBuild" class="footer-section">
+            <div class="footer-section" style="background-color: #87CEFA;">
                 <h3>Aprende a construirla</h3>
                 <p>Siguiendo estas metodologías construiremos nuestra página web mediante:</p>
                 <ul>
@@ -96,7 +105,7 @@
                     <li><a href="#" onclick="showSection('javascript')">JavaScript</a></li>
                 </ul>
             </div>
-            <div id="footerUx" class="footer-section">
+            <div class="footer-section" style="background-color: #FFB6C1;">
                 <h3>Mejora sus funciones</h3>
                 <p>Una vez creada nuestra web es el momento de mejorar sus funciones:</p>
                 <ul>
@@ -104,7 +113,7 @@
                     <li><a href="#" onclick="showSection('usabilidad')">Usabilidad</a></li>
                 </ul>
             </div>
-            <div id="footerAuto" class="footer-section">
+            <div class="footer-section" style="background-color: #98FB98;">
                 <h3>Cuánto has aprendido</h3>
                 <p>Para finalizar es el momento de evaluar lo que hemos aprendido en este curso:</p>
                 <ul>

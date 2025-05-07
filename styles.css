@@ -1,29 +1,77 @@
 /* Estilos generales */
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ebe6e0;
-    color: #333;
-    line-height: 1.6;
-}
-
+/* ====================
+   Variables & Reset
+   ==================== */
+   :root {
+    --clr-ini:#FFD700;
+    --clr-met: #FFA07A;
+    --clr-html: #87CEFA;
+    --clr-js: #259ee9;
+    --clr-css: #FFB6C1;
+    --clr-usab: #FFADAD;
+    --clr-auto: #98FB98;
+    --clr-bg: #fff;
+    --clr-text: #1e025d;
+    --clr-back: #ebe6e0;
+    --ff-main: 'Colonna MT', Tahoma, sans-serif;
+    --spacing: 1rem;
+  }
+/* Cabecera */  
 header {
     position: fixed;
-    width: 100%;	
-    background: linear-gradient(90deg, #ebe6e0, #00b4d8);
-    color: black;
-    padding: 1rem;
+    width: 100%; 
+    background: linear-gradient(90deg, #ebe6e0, #95ccda); /* Fondo degradado */
+    color: var(--clr-text);
+    padding: 0.6rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid black; /* Borde negro */
+    border: 1px solid var(--clr-text); /* Borde azul oscuro */
 }
 
 header .logo {
     font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-weight: bold; /* negrita */
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem; /* espacio después del texto */
 }
+
+/* Color modifiers */
+nav .menu__item--ini { background: var(--clr-ini); }
+nav .menu__item--met { background: var(--clr-met); }
+nav .menu__item--html { background: var(--clr-html); }
+nav .menu__item--css { background: var(--clr-css); }
+nav .menu__item--js  { background: var(--clr-js); }
+nav .menu__item--usabilidad { background: var(--clr-usab); }
+nav .menu__item--autoevaluacion { background: var(--clr-auto); }
+
+/* Cuerpo */
+body {
+    font-family: var(--ff-main);
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-back);
+    color: var(--clr-text);
+    line-height: auto;
+}
+
+/* Main */
+main {
+    padding: 2rem; /* margen lateral */
+    padding-top: 8rem; /* margen superior */
+    max-width: auto; /* 1200px */
+    margin: auto;
+}
+
+.section {
+    background: var(--clr-back) /* color de fondo del content */
+    border-radius: 8px; /* bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section.hidden {
+    display: none;
+}
+
 
 /* Menú */
 nav ul {
@@ -32,11 +80,8 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    /*background: white;*/
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     border-radius: 8px;
     overflow: hidden;
-    /*border: 1px solid black;  Borde negro */
 }
 
 nav ul li {
@@ -45,10 +90,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000000;/*Color text menu header*/
+    color: var(--clr-text);/*Color text menu header*/
     text-decoration: none;
     font-weight: bold;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 4.5rem;
     display: block;
     transition: all 0.3s ease;
 }
@@ -76,16 +121,6 @@ nav ul li ul.submenu {
 nav ul li:hover ul.submenu {
     display: block;
 }
-.submenu {
-  display: none; /* Inicialmente oculto */
-  position: absolute; /* Posiciona el menú */
-  /*background-color: #f9f9f9;  Color de fondo */
-  /* min-width: 160px; Ancho mínimo */
-  /*padding: 10px;  Espaciado interno */
-}
-#menu li:hover .submenu {
-  display: block; /* Mostrar al pasar el ratón */
-}
 
 nav ul li ul.submenu li a {
     padding: 0.5rem 1rem;
@@ -98,77 +133,19 @@ nav ul li ul.submenu li a:hover {
     background: #00b4d8;
     color: white;
 }
-#liInicio {
-    background-color: #FFD700;
-}
-#liMetodologia {
-    background-color: #FFA07A;
-}
-#liHtml {
-    background-color: #87CEFA;
-}
-#liCss {
-    background-color: #FFB6C1;
-}
-#liJs {
-    background-color: #9370DB;
-}
-#liUx {
-    background-color: #98FB98;
-}
-#liAuto {
-    background-color: #F0E68C;
-}
-#divInicio {
-    display: flex; 
-	align-items: center; 
-	justify-content: space-between;
-}
-#divInicioLeft {
-    style="flex: 1; 
-	padding-right: 1rem;
-}
-#divInicioRight {
-    style="flex: 1; 
-	text-align: center;
-}
-#imgInicio {
-    style="max-width: 100%; 
-	height: auto; 
-	border-radius: 8px;
-}
-
-/* Main */
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section {
-    padding: 2rem;
-    background: #ebe6e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.section.hidden {
-    display: none;
-}
 
 /* Footer */
 footer {
     text-align: left;
     padding: 1rem;
-    background: linear-gradient(90deg, #00b4d8, #ebe6e0);
-    color: black;
+    background: linear-gradient(90deg, #ebe6e0, #95ccda);
+    color: var(--clr-text);
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid black; /* Borde negro */
+    border: 1px solid var(--clr-text); /* Borde azul oscuro */
 }
 
 footer .footer-section {
@@ -189,26 +166,16 @@ footer h3 {
 }
 
 footer a {
-    color: black;
+    color: var(--clr-text);
     text-decoration: underline;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #caf0f8;
+    color: var(--clr-back);
+    font-weight: bold;
 }
-#footerMet {
-    background-color: #FFA07A;
-}
-#footerBuild {
-    background-color: #87CEFA;
-}
-#footerUx {
-    background-color: #FFB6C1;
-}
-#footerAuto {
-    background-color: #98FB98;
-}
+
 /* Responsivo */
 @media (max-width: 768px) {
     nav ul {
@@ -230,5 +197,5 @@ footer a:hover {
 }
 .imagen-derecha {
     float: right; /* Posiciona la imagen a la derecha */
-    margin-left: 20px; /* Espacio entre la imagen y el texto */
+    margin-left: 30px; /* Espacio entre la imagen y el texto */
 }
