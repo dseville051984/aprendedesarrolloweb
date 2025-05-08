@@ -12,7 +12,7 @@ loadContent('#footer', 'footer.html');
 
 // Función para cargar vistas
 function loadViewFromHash() {
-  const view = location.hash.slice(1) || 'home';
+  const view = location.hash.slice(1) || 'index';
   loadContent('#content', `views/${view}.html`);
 }
 
