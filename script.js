@@ -7,7 +7,7 @@ async function loadContent(selector, file) {
 }
 
 // Cargar cabecera y pie de página al iniciar
-loadContent('#menu', 'header.html');
+loadContent('#header', 'header.html');
 loadContent('#footer', 'footer.html');
 
 // Función para cargar vistas
